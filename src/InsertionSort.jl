@@ -15,8 +15,6 @@ function insertion_sort!(array::Array{Int, 1}) where Int
     end
     arr[j+1] = key
 end
-return arr
-end
 
 function check_sort(N::Int = 100)
     array = collect(1:N)
