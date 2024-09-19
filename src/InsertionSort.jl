@@ -3,17 +3,18 @@ module InsertionSort
 using Test
 using Random
 
-function insertion_sort!(array::Array{Int, 1}) where Int
-    # Insert your code here
-    n = length(arr)
+function insertion_sort!(array::Array{Int, 1})
+    n = length(array)
     for i in 2:n
-        key = arr[i]
-        j = i-1
-        where j > 0 && arr[j] > key
-        arr[j+1] = arr[j]
-        j -=1
+        key = array[i]
+        j = i - 1
+        while j > 0 && array[j] > key
+            array[j + 1] = array[j]
+            j -= 1
+        end
+        array[j + 1] = key
     end
-    arr[j+1] = key
+    return array
 end
 
 function check_sort(N::Int = 100)
@@ -25,5 +26,3 @@ end
 
 export insertion_sort!, check_sort
 end
-
-export insertion_sort!
