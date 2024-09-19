@@ -25,3 +25,5 @@ end
 
 export insertion_sort!, check_sort
 end
+
+export insertion_sort!
