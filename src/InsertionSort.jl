@@ -1,3 +1,3 @@
 module InsertionSort
-include("insertion_sort.jl")
+include("utils.jl")
 end
